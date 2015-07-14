@@ -9,3 +9,8 @@
 	Included is also a simple template loader.  Thanks to <a href="https://github.com/ccoenraets">@ccoenraets</a> for
 	the template loader code and a lot of great examples.
 </p>
+<p>
+	You can view the demo here: <a href="http://primezerocafe.com/backbone-tabs">http://primezerocafe.com/backbone-tabs</a>
+	<br/>
+	I will be also creating a blog post explaining how the tabs work.
+</p>
