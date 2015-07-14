@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<!-- Libraries -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>		
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap-theme.min.css"/>		
+
+		<!-- Local Libraries -->
+		<script type="text/javascript" src="assets/js/template_loader.js"></script>		
+		
+		<!-- Models -->
+		<script type="text/javascript" src="assets/js/models/Time.js"></script>		
+		
+		<!-- Views -->
+		<script type="text/javascript" src="assets/js/views/ViewWithTabs.js"></script>
+		<script type="text/javascript" src="assets/js/views/Tab1.js"></script>
+		<script type="text/javascript" src="assets/js/views/Tab2.js"></script>
+		
+		<!-- Router -->
+		<script type="text/javascript" src="assets/js/router.js"></script>
+		
+		<!-- Initialization -->
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+			
+				var baseUrl = 'assets/templates/html/';    
+				templateLoader.load(baseUrl, [
+						'ViewWithTabs',
+						'Tab1',
+						'Tab2'
+					],        
+					
+				function () {
+						app = new Router();
+						Backbone.history.start();           
+				}); 
+				
+			});
+			
+		</script>
+		
+		<style>
+			
+			body > .container {
+				padding: 100px;
+			}
+			
+			h1 {
+				font-family: sans-serif;
+				font-size: 64px;
+			}
+			
+			h1.title {
+				font-size: 50px;
+				margin-bottom: 64px;
+			}
+			
+			div.tab-content {
+				border: 1px solid #ddd;
+				border-top: none;
+				height: 400px;
+				background-color: #f5f5f5;
+			}
+			
+			div.tab-pane {
+				text-align: center;				
+			}
+			
+			div.tab-pane {
+				padding-top: 96px;
+			}
+			
+			.nav-tabs > li.active > a, 
+			.nav-tabs > li.active > a:hover, 
+			.nav-tabs > li.active > a:focus{
+				background-color: #f5f5f5;
+			}
+			
+			.nav-tabs > li.active > a#tab2, 
+			.nav-tabs > li.active > a#tab2:hover, 
+			.nav-tabs > li.active > a#tab2:focus{
+				background-color: #ded;
+			}			
+			
+			.row.footer {
+				margin-top: 128px;
+				padding-top: 20px;
+				border-top: 1px solid #eee;
+				text-align: center;
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1 class="title">Backbone subview tabs with navigation.</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="content">
+								
+					</div>
+				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-xs-12">
+					<div><a href="primezerocafe.com">For more info visit my blog at PrimeZeroCafe.com</a></div>
+					<small>©2015 - Marcin Jackowiak</small>
+				</div>
+			</div>
+		</div>
+	
+	</body>
+
+</html>
